@@ -13,8 +13,8 @@ public class UserAccountDtoAssembler implements RepresentationModelAssembler<Use
 		dto.setEmail(userAccount.getEmail());
 		dto.setPassword(UserDTO.HIDDEN_PASSWORD);
 		dto.setName(userAccount.getName());
-		dto.setPhone(userAccount.getContacts().getPhone());
-		dto.setAddress(userAccount.getContacts().getAddress());
+//		dto.setPhone(userAccount.getContacts().getPhone());
+//		dto.setAddress(userAccount.getContacts().getAddress());
 		return dto;
 	}
 
