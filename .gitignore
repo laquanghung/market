@@ -15,3 +15,7 @@ classes
 java_pid*.hprof
 .DS_Store
 !.mvn/wrapper/maven-wrapper.jar
+/logs/
+/market-core/target/
+/market-rest/target/
+/market-web/target/

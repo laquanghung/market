@@ -1,5 +1,6 @@
 package market;
 
+import market.interceptor.FakeAuthenInterceptor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -8,7 +9,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @SpringBootConfiguration
 @EnableAutoConfiguration
-@Import({DataConfig.class, RestSecurityConfig.class, RestConfig.class})
+@Import({DataConfig.class, RestSecurityConfig.class, RestConfig.class, ServletConfig.class})
 @PropertySource("classpath:/market.properties")
 public class RestApplication {
 

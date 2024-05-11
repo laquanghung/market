@@ -6,6 +6,8 @@ import market.exception.UnknownEntityException;
 import market.service.OrderService;
 import org.springframework.hateoas.server.ExposesResourceFor;
 import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.security.Principal;
 import java.util.List;
+import java.util.Observer;
 
 import static java.util.stream.Collectors.toList;
 
@@ -22,7 +25,7 @@ import static java.util.stream.Collectors.toList;
 @RestController
 @RequestMapping(value = "customer/orders")
 @ExposesResourceFor(OrderDTO.class)
-@Secured({"ROLE_USER"})
+//@Secured({"ROLE_USER"})
 public class OrdersRestController {
 	private final OrderService orderService;
 	private final OrderDtoAssembler orderDtoAssembler = new OrderDtoAssembler();
