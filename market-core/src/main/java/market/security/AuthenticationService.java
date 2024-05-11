@@ -18,7 +18,8 @@ public class AuthenticationService {
 		try {
 			Authentication auth = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(login, password));
 			SecurityContextHolder.getContext().setAuthentication(auth);
-			return auth.isAuthenticated();
+//			return auth.isAuthenticated();
+			return true;
 		} catch (BadCredentialsException ex) {
 			// todo
 			return false;
